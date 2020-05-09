@@ -59,10 +59,9 @@ export class StoreComponent {
   
     const pageCount = Math.ceil(pages)
 
-    // x is 0 and i is the index
-    // if page count is 3, it generate [1, 2, 3]
+
     const pageNumbers = Array(pageCount)
-      .fill(0) // fills with 0
+      .fill(0) 
       .map((x, i) => i + 1)
 
     return pageNumbers
