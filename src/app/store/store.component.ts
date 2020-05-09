@@ -15,12 +15,24 @@ export class StoreComponent {
 
   constructor(private repository: ProductRepository, private cart: Cart, private router: Router) {}
 
+  itemsearch: string ="";
+  abc(name: string) {
+    var filter = this.itemsearch.slice(); 
+    var a = true;
+    if (filter !== ""){
+      a= name.search(filter) !== -1;
+    }
+    return a;
+  }
+
   get products(): Product[] {
     let pageIndex = (this.selectedPage - 1) * this.productsPerPage
     return this.repository
       .getProducts(this.selectedCategory)
+      .filter((product) => this.abc(product.name.toLowerCase()))
       .slice(pageIndex, pageIndex + this.productsPerPage)
   }
+
 
   get categories(): string[] {
     return this.repository.getCategories()
