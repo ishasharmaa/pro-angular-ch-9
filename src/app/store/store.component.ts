@@ -39,7 +39,7 @@ export class StoreComponent {
   }
 
   changeCategory(newCategory?: string) {
-    // console.log('change categorhy. New value: ' + newCategory)
+    
     this.selectedCategory = newCategory
   }
 
