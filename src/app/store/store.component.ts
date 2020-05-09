@@ -17,7 +17,7 @@ export class StoreComponent {
 
   itemsearch: string ="";
   abc(name: string) {
-    var filter = this.itemsearch.slice(); 
+    var filter = this.itemsearch.trimRight(); 
     var a = true;
     if (filter !== ""){
       a= name.search(filter) !== -1;
