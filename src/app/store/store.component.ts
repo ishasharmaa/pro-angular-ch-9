@@ -56,7 +56,7 @@ export class StoreComponent {
     const products = this.repository.getProducts(this.selectedCategory)
     const pages = products.length / this.productsPerPage
 
-    // the next whole number, 0.5 => 1, 3.2 => 4
+  
     const pageCount = Math.ceil(pages)
 
     // x is 0 and i is the index
