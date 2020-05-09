@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Product } from './product.model'
 
-@Injectable() // inject it to other places
+@Injectable() 
 export class Cart {
   public lines: CartLine[] = []
   public itemCount: number = 0
