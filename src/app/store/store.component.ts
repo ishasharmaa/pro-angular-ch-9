@@ -29,7 +29,7 @@ export class StoreComponent {
     let pageIndex = (this.selectedPage - 1) * this.productsPerPage
     return this.repository
       .getProducts(this.selectedCategory)
-      .filter((product) => this.abc(product.name.toLowerCase()))
+      //.filter((product) => this.abc(product.name.toLowerCase()))
       .slice(pageIndex, pageIndex + this.productsPerPage)
   }
 
